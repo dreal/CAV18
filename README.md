@@ -14,7 +14,8 @@ In CAV (International Conference on Computer Aided Verification) 2018
 Virtual Machine
 ---------------
 
- - Image File: [http://www.cs.cmu.edu/~soonhok/CAV18_Paper248_AE.ova](http://www.cs.cmu.edu/~soonhok/CAV18_Paper248_AE.ova)
+ - Image File: [http://www.cs.cmu.edu/~soonhok/CAV18_Paper248_AE.ova](http://www.cs.cmu.edu/~soonhok/CAV18_Paper248_AE.ova) 
+ - SHA256 of Image: `b6c3d4c476ac67e2e495fc2ac741cbf2d34b74443d560d28efe8f14b452716de`
  - OS: ubuntu-16.04.4-desktop-amd64
  - Account (ID/Password): cav / ae
  - Host Platform: 2017 Macbook Pro with 2.9 GHz Intel Core i7
