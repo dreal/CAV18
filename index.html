@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Artifact evaluation</title>
+	<meta name="author" content="Soonho Kong"/>
+	<meta name="date" content="15 Apr 2018"/>
+	<link type="text/css" rel="stylesheet" href="css/tufte.css"/>
+</head>
+<body>
+
+<p>Artifact evaluation of the following paper.</p>
+
+<pre><code>Delta-Decision Procedures for Exists-Forall Problems over the Reals
+Soonho Kong, Armando Solar-Lezama, and Sicun Gao
+In CAV (International Conference on Computer Aided Verification) 2018
+</code></pre>
+
+<h2 id="virtualmachine">Virtual Machine</h2>
+
+<ul>
+<li> Image File:</li>
+<li> OS: ubuntu-16.04.4-desktop-amd64</li>
+<li> Account (ID/Password): cav / ae</li>
+<li> Host Platform: 2017 Macbook Pro with 2.9 GHz Intel Core i7
+(QuadCore) and 16 GB RAM running MacOS 10.13.4</li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<ul>
+<li> Section 5.1 Nonlinear Global Optimization
+
+<ul>
+<li>Table 1.</li>
+</ul></li>
+<li> Section 5.2 Synthesizing Lyapunov Function for Dynamical System
+
+<ul>
+<li>Normalized Pendulum</li>
+<li>Damped Mathieu System</li>
+</ul></li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>Log in the provided VM (ID: <code>cav</code>, PASSWORD: <code>ae</code>). Open a terminal
+and execute the following instructions.</p>
+
+<ul>
+<li><p> Table 1 in Section 5.1 (Expected Running Time &lt;= 5min)</p>
+
+<pre><code>./dreal4/bazel-bin/dreal/api/cav18_benchmark
+./dreal4/bazel-bin/dreal/api/cav18_benchmark --local-optimization
+</code></pre>
+
+<p><a href="https://github.com/dreal/dreal4/blob/c37dfdbb64c2bb15c8f9d7250d20e98c53b948e5/dreal/api/test/cav18_benchmark.py">[Source Code]</a></p></li>
+<li><p> Normalized Pendulum in Section 5.2 (Expected Running Time &lt;= 1min)</p>
+
+<pre><code>./dreal4/bazel-bin/dreal/examples/synthesize_lyapunov_normalized_pendulum
+</code></pre>
+
+<p><a href="https://github.com/dreal/dreal4/blob/master/dreal/examples/synthesize_lyapunov_normalized_pendulum.cc">[Source Code]</a></p></li>
+<li><p> Damped Mathieu System in Section 5.2 (Expected Running Time &lt;= 1min)</p>
+
+<pre><code>./dreal4/bazel-bin/dreal/examples/synthesize_lyapunov_damped_mathieu
+</code></pre>
+
+<p><a href="https://github.com/dreal/dreal4/blob/master/dreal/examples/synthesize_lyapunov_damped_mathieu.cc">[Source Code]</a></p></li>
+</ul>
+
+<h2 id="quality">Quality</h2>
+
+<ul>
+<li> Source code of the implementation, dReal4, is available at
+<a href="https://github.com/dreal/dreal4/tree/cav18">https://github.com/dreal/dreal4/tree/cav18</a>.</li>
+<li> Its
+<a href="https://github.com/dreal/dreal4/blob/master/README.md">README.md</a>
+file provides build and install instructions.</li>
+<li> Source code is documented using Doxygen. Documentation webpage is
+at
+<a href="https://dreal.github.io/dreal4">https://dreal.github.io/dreal4</a>.</li>
+<li> We provide a comprehensive set of unittests, which can be executed by running
+&#8220;<code>bazel test //...</code>&#8221;.</li>
+<li> We provide packages for macOS (via homebrew) and Debian/Ubuntu
+Linux. The instructions are in the
+<a href="https://github.com/dreal/dreal4/blob/master/README.md">README.md</a>.</li>
+</ul>
+
+</body>
+</html>
+
